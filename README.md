@@ -10,6 +10,8 @@
   - other
 - how to setup ?
   - use XAMPP and set database
+  - import the SQL schema from `database/schema.sql`
+  - update database credentials and Razorpay keys in `assets/php/config.php`
 
 ## Features
 - we have two Panels.
@@ -45,3 +47,26 @@
 ![img](https://github.com/ayushsolanki29/esport-tournament-organization-app-php/blob/main/screenshot/1(3).png)
 ![img](https://github.com/ayushsolanki29/esport-tournament-organization-app-php/blob/main/screenshot/1(4).png)
 
+## Database setup
+
+1. Create a MySQL database and user.
+2. Import `database/schema.sql`.
+3. Update the database credentials and Razorpay keys in `assets/php/config.php`.
+4. Add the Razorpay PHP SDK to `assets/razorpay/Razorpay.php` (or update the include path in the payment scripts).
+
+The schema includes default rows for admin login (`settings` row `id=3`). Please change the admin username and password after import.
+
+## Hosting on cPanel
+
+1. **Upload files**
+   - Zip the project and upload it via cPanel File Manager, then extract into `public_html`.
+2. **Create database**
+   - Use the *MySQL Database Wizard* to create a database and user.
+3. **Import schema**
+   - Open *phpMyAdmin*, select the database, and import `database/schema.sql`.
+4. **Update config**
+   - Edit `assets/php/config.php` with your database credentials and Razorpay keys.
+5. **File permissions**
+   - Ensure `assets/images/payment` is writable so payment screenshots can upload.
+6. **Admin login**
+   - Log in at `/admin/login.php` using the credentials from the `settings` table, then update them.
