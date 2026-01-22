@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `payments` (
 INSERT INTO `settings` (`id`, `data1`, `data2`) VALUES
   (1, '0', ''),
   (2, 'ended', ''),
-  (3, 'admin', 'admin12345'),
+  (3, 'adminx', 'admin12345'),
   (4, 'https://chat.whatsapp.com/your-invite', '')
 ON DUPLICATE KEY UPDATE
   `data1` = VALUES(`data1`),
