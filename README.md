@@ -55,7 +55,6 @@
 4. Add the Razorpay PHP SDK to `assets/razorpay/Razorpay.php` (or update the include path in the payment scripts).
 
 The schema includes default rows for admin login (`settings` row `id=3`). Please change the admin username and password after import.
-The schema also includes tables for multi-tournament management, team wallets, and tournament entries.
 
 ## Hosting on cPanel
 
@@ -71,7 +70,3 @@ The schema also includes tables for multi-tournament management, team wallets, a
    - Ensure `assets/images/payment` is writable so payment screenshots can upload.
 6. **Admin login**
    - Log in at `/admin/login.php` using the credentials from the `settings` table, then update them.
-7. **Tournament management**
-   - Use `/admin/tournaments.php` to create and manage multiple tournaments with entry fees, prize pools, and room details.
-8. **User dashboard**
-   - Teams can use `/dashboard.php` to add balance, join tournaments, and view room IDs/passwords when they are released.
