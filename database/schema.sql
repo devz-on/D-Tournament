@@ -80,6 +80,61 @@ CREATE TABLE IF NOT EXISTS `payments` (
   KEY `payments_team_label_idx` (`team_label`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE IF NOT EXISTS `tournaments` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(150) NOT NULL,
+  `map_name` VARCHAR(150) NOT NULL,
+  `entry_fee` DECIMAL(10,2) NOT NULL DEFAULT 0,
+  `prize_pool` DECIMAL(10,2) NOT NULL DEFAULT 0,
+  `start_time` DATETIME NOT NULL,
+  `status` ENUM('draft', 'published', 'completed', 'archived') NOT NULL DEFAULT 'draft',
+  `room_id` VARCHAR(100) DEFAULT NULL,
+  `room_password` VARCHAR(100) DEFAULT NULL,
+  `room_open_at` DATETIME DEFAULT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `tournament_entries` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `tournament_id` INT NOT NULL,
+  `team_id` INT NOT NULL,
+  `entry_fee` DECIMAL(10,2) NOT NULL DEFAULT 0,
+  `status` ENUM('joined', 'cancelled', 'completed') NOT NULL DEFAULT 'joined',
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tournament_team_unique` (`tournament_id`, `team_id`),
+  KEY `tournament_entries_team_idx` (`team_id`),
+  CONSTRAINT `tournament_entries_tournament_fk` FOREIGN KEY (`tournament_id`) REFERENCES `tournaments` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `tournament_entries_team_fk` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `team_wallets` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `team_id` INT NOT NULL,
+  `balance` DECIMAL(10,2) NOT NULL DEFAULT 0,
+  `winnings_balance` DECIMAL(10,2) NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `team_wallet_unique` (`team_id`),
+  CONSTRAINT `team_wallets_team_fk` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `wallet_transactions` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `team_id` INT NOT NULL,
+  `type` ENUM('credit', 'debit', 'winnings') NOT NULL,
+  `amount` DECIMAL(10,2) NOT NULL,
+  `source` VARCHAR(100) NOT NULL DEFAULT 'manual',
+  `note` TEXT,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `wallet_transactions_team_idx` (`team_id`),
+  CONSTRAINT `wallet_transactions_team_fk` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Default settings:
 -- id=1: site view counter
 -- id=2: tournament status (data1=start|ended), data2=token

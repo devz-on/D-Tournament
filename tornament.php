@@ -118,44 +118,41 @@ session_start();
             <section class="team section-wrapper" id="team">
                 <div class="container ">
 
-                    <h2 class="h2 section-title">Free Fire - tornament</h2>
+                    <h2 class="h2 section-title">Available Tournaments</h2>
                     <div class="main">
-                        <section class="tournament-card">
-                            <div class="card-heading">
-                                <h2>Game: Free Fire MAX</h2>
-                            </div>
-                            <div class="card-details">
-                                <p><strong class="highlighter">Match Date :</strong> April 27, 2024</p>
-                                <p><strong class="highlighter">Entry Fee:</strong> 60 INR per team</p>
-                                <p><strong class="highlighter">Prize Pool:</strong> 2000 Cash INR + 3000 Worth Rewards</p>
-                                <p><strong class="highlighter">Who Can Participate:</strong> Open to all players aged 16
-                                    and above</p>
-                                <p><strong class="highlighter">Registration Deadline:</strong> April 25, 2024</p>
-                            </div>
-                            <div class="card-actions">
-                                <a href="<?= $registion_url ?>" class="btn-register">Register Now</a>
-                            </div>
-                        </section>
-                        <section class="tournament-card">
-                            <div class="card-heading">
-                                <h2>Tornamet End Date: April 28, 2024</h2>
-                            </div>
-                            <div class="card-details">
-                                <p><strong class="highlighter">Prize Distribution:</strong> Winners will receive their
-                                    prizes within 7 days
-                                    of
-                                    tournament conclusion</p>
-                                <p><strong class="highlighter">Rules:</strong></p>
-                                <ul>
-                                    <li>All matches will be played in TPP (Third Person Perspective) mode</li>
-                                    <li>Teams must adhere to fair play rules and sportsmanship guidelines</li>
-                                    <li>Cheating, hacking, or exploiting bugs will result in immediate disqualification
-                                    </li>
-                                </ul>
-                                <p><strong class="highlighter">Contact:</strong> For any inquiries, <a
-                                     style="display: inline-block;text-decoration:underline;" class="highlighter"   href="contact.php">contact us</a> </p>
-                            </div>
-                        </section>
+                        <?php
+                        $tournaments = mysqli_query($con, \"SELECT * FROM tournaments WHERE status='published' ORDER BY start_time ASC\");
+                        if ($tournaments && mysqli_num_rows($tournaments) > 0) {
+                            while ($tournament = mysqli_fetch_assoc($tournaments)) {
+                        ?>
+                                <section class=\"tournament-card\">
+                                    <div class=\"card-heading\">
+                                        <h2><?= htmlspecialchars($tournament['name']) ?></h2>
+                                    </div>
+                                    <div class=\"card-details\">
+                                        <p><strong class=\"highlighter\">Map:</strong> <?= htmlspecialchars($tournament['map_name']) ?></p>
+                                        <p><strong class=\"highlighter\">Match Date:</strong> <?= date('d M Y, h:i A', strtotime($tournament['start_time'])) ?></p>
+                                        <p><strong class=\"highlighter\">Entry Fee:</strong> ₹<?= number_format((float) $tournament['entry_fee'], 2) ?></p>
+                                        <p><strong class=\"highlighter\">Prize Pool:</strong> ₹<?= number_format((float) $tournament['prize_pool'], 2) ?></p>
+                                        <p><strong class=\"highlighter\">Status:</strong> <?= ucfirst($tournament['status']) ?></p>
+                                    </div>
+                                    <div class=\"card-actions\">
+                                        <a href=\"dashboard.php\" class=\"btn-register\">Join via Dashboard</a>
+                                    </div>
+                                </section>
+                        <?php
+                            }
+                        } else {
+                        ?>
+                            <section class=\"tournament-card\">
+                                <div class=\"card-heading\">
+                                    <h2>No tournaments published yet</h2>
+                                </div>
+                                <div class=\"card-details\">
+                                    <p>Check back soon for new events and announcements.</p>
+                                </div>
+                            </section>
+                        <?php } ?>
                     </div>
                     <div class="image-container">
                  

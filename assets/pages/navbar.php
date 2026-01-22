@@ -68,6 +68,7 @@ if ($result_settings) {
         <li><a href="index.php#tournament" class="navbar-link">Tournament</a></li>
         <li><a href="index.php#team" class="navbar-link">Team</a></li>
         <li><a href="profile.php" class="navbar-link">My Team</a></li>
+        <li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>
         <li><a href="contact.php" class="navbar-link">Contact</a></li>
 
       </ul>
