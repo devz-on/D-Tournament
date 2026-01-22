@@ -1,0 +1,405 @@
+[22-Jan-2026 12:51:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:51:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:52:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:52:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:52:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:52:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:52:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:53:23 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:54:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:56:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:56:02 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:57:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:57:38 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:57:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:57:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 12:58:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 13:04:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'data2' in 'field list' in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php:4
+Stack trace:
+#0 /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php(4): mysqli_query(Object(mysqli), 'SELECT `data1`,...')
+#1 /home/oravffoz/tournament.devxjin.site/index.php(16): include('/home/oravffoz/...')
+#2 {main}
+  thrown in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 4
+[22-Jan-2026 13:05:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 5
+[22-Jan-2026 13:05:03 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/assets/pages/navbar.php on line 5
+[22-Jan-2026 13:09:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:09:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:09:48 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:09:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:09:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:09:54 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:15:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:15:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:15:27 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:15:37 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/register.php on line 206
+[22-Jan-2026 13:15:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:16:05 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:16:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/register.php on line 206
+[22-Jan-2026 13:16:08 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:16:20 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:16:20 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:16:20 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:16:23 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:16:23 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:16:23 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:16:37 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:16:37 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:16:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:17:16 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:17:16 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:17:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:17:19 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:17:19 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:17:19 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:17:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:17:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:17:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:17:22 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:17:22 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:17:22 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:17:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:17:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:17:27 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:17:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:17:27 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:17:27 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:18:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:18:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:18:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:18:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:18:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:18:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:18:25 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:18:25 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:18:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:25:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:25:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:25:02 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:25:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/register.php on line 206
+[22-Jan-2026 13:25:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:26:53 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/register.php on line 206
+[22-Jan-2026 13:26:53 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:40:22 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:40:22 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:40:22 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:40:25 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/register.php on line 121
+[22-Jan-2026 13:40:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/register.php on line 124
+[22-Jan-2026 13:40:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:42:06 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:42:06 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:42:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:42:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:42:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:42:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:44:58 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:45:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:45:17 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:48:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/register.php on line 205
+[22-Jan-2026 13:48:38 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:51:27 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:52:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:52:32 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:52:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:52:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:52:54 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:53:07 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:53:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:53:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:56:31 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:57:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:58:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:58:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:58:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 13:58:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 13:58:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 13:58:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:00:46 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:00:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:00:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:00:49 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:00:51 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:01:05 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:02:34 UTC] PHP Notice:  Undefined index: team_label in /home/oravffoz/tournament.devxjin.site/register.php on line 11
+[22-Jan-2026 14:02:34 UTC] PHP Notice:  Undefined index: team_label in /home/oravffoz/tournament.devxjin.site/register.php on line 18
+[22-Jan-2026 14:02:34 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:04:55 UTC] PHP Notice:  Undefined index: team_label in /home/oravffoz/tournament.devxjin.site/register.php on line 11
+[22-Jan-2026 14:04:55 UTC] PHP Notice:  Undefined index: team_label in /home/oravffoz/tournament.devxjin.site/register.php on line 18
+[22-Jan-2026 14:04:55 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:05:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:10:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:10:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:10:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:11:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:11:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:11:01 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:23:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:24:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:24:44 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:24:44 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:24:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:24:47 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:24:56 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:25:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:25:01 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:09 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:12 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:25:12 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:25:12 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:14 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:20 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:24 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:26 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:39 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/verifed_teams.php on line 33
+[22-Jan-2026 14:25:39 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:44 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:47 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:25:53 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:26:10 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:32:36 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:32:45 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:33:51 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:35:00 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:35:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:35:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:35:07 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:35:49 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:36:09 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:44:47 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:44:51 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:46:03 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:48:06 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:48:13 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:48:30 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:48:38 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:48:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:48:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:48:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:49:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:49:01 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:49:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:49:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:49:06 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:49:06 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/verifed_teams.php on line 33
+[22-Jan-2026 14:49:06 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:51:48 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:54:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:54:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:54:10 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:54:11 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:54:11 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:54:11 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:54:12 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 14:54:12 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 14:54:12 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 14:55:24 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:56:20 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 14:58:06 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 15:06:38 UTC] Mailer Error: SMTP Error: Could not authenticate.
+[22-Jan-2026 15:10:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:10:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:10:31 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:11:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:11:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:11:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:11:58 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:12:14 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:13:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:14:05 UTC] Mailer Error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 99 Additional SMTP info: Cannot assign requested address
+[22-Jan-2026 15:17:50 UTC] Mailer Error: SMTP Error: Could not connect to SMTP host. Failed to connect to serverSMTP server error: Failed to connect to server SMTP code: 101 Additional SMTP info: Network is unreachable
+[22-Jan-2026 15:18:14 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:18:14 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:18:14 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:21:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:21:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:21:31 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:21:33 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:21:46 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:30:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:30:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:30:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:30:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:30:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:30:57 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:31:01 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:31:01 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:31:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:31:26 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:26 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:27 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:27 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:28 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/verifed_teams.php on line 33
+[22-Jan-2026 15:31:30 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:31:30 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:34:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:34:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:34:15 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:52:34 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:52:34 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:52:34 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:52:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 15:52:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 15:52:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:55:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 15:55:52 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 16:16:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 16:16:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 16:16:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 16:16:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 16:16:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 16:16:36 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 16:16:37 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 16:16:37 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 16:16:37 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 16:39:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 16:39:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 16:39:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 16:39:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 16:39:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 16:39:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 17:06:39 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 17:06:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 132
+[22-Jan-2026 17:06:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/oravffoz/tournament.devxjin.site/index.php on line 224
+[22-Jan-2026 17:06:42 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
+[22-Jan-2026 17:06:45 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/oravffoz/tournament.devxjin.site/assets/pages/footer.php on line 84
