@@ -1,6 +1,12 @@
 <?php
-require_once "assets/php/config.php";
-require_once "assets/razorpay/Razorpay.php";
+require_once __DIR__ . "/config.php";
+$razorpayPath = __DIR__ . "/../razorpay/Razorpay.php";
+if (!file_exists($razorpayPath)) {
+    http_response_code(500);
+    echo "Razorpay SDK missing. Place Razorpay.php in assets/razorpay.";
+    exit;
+}
+require_once $razorpayPath;
 
 use Razorpay\Api\Api;
 use Razorpay\Api\Errors\SignatureVerificationError;

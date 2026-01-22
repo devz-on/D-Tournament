@@ -30,11 +30,20 @@ if (isset($_POST['update_team'])) {
 
     $update_team = mysqli_query($con, "UPDATE `teams` SET `f_player`='$p1',`s_player`='$p2',`t_player`='$p3',`frth_player`='$p4' WHERE `team_label`='$unique_code22'");
     if ($update_team) {
-        echo "<script>alert('Updated successfull!')</script";
-        header("location:verifed_team.php");
+        header("location:verifed_team.php?status=updated");
+        exit;
     } else {
-        echo "<script>alert('Faild  to update team profile!')</script>";
-        header("location:verifed_team.php");
+        header("location:verifed_team.php?status=failed");
+        exit;
+    }
+}
+
+$statusMessage = null;
+if (isset($_GET['status'])) {
+    if ($_GET['status'] === 'updated') {
+        $statusMessage = "Updated successfully!";
+    } elseif ($_GET['status'] === 'failed') {
+        $statusMessage = "Failed to update team profile.";
     }
 }
 ?>
@@ -62,7 +71,11 @@ if (isset($_POST['update_team'])) {
                         <div class="col-sm-6">
                             <h1 class="m-0">Eligible Teams</h1>
                             <div class="d-grid gap-2">
-
+                                <?php if ($statusMessage) { ?>
+                                    <div class="alert alert-info mt-2">
+                                        <?= $statusMessage ?>
+                                    </div>
+                                <?php } ?>
                             </div>
 
                         </div>
@@ -114,7 +127,7 @@ if (isset($_POST['update_team'])) {
                                                         $winnerQuery = "SELECT * FROM `winners` WHERE team_id = " . $row['id'];
                                                         $winnerResult = mysqli_query($con, $winnerQuery);
                                                         if (mysqli_num_rows($winnerResult) > 0) {
-                                                            $row1 = mysqli_fetch_assoc($winnerResult) // If team ID exists in winners
+                                                            $row1 = mysqli_fetch_assoc($winnerResult); // If team ID exists in winners
                                                         ?>
                                                             <p class="bg-success text-center p-2 rounded">
                                                                 <?php
@@ -164,7 +177,7 @@ if (isset($_POST['update_team'])) {
                                                                             <label for="" class="form-label">Player 4</label>
                                                                             <input type="text" name="p4" id="" value="<?= $row['frth_player'] ?>" class="form-control" placeholder="Place here New URL" aria-describedby="helpId" />
                                                                         </div>
-                                                                        <input type="hidden" name="team-code" value=<?= $row['team_label'] ?>>
+                                                                        <input type="hidden" name="team-code" value="<?= $row['team_label'] ?>">
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
