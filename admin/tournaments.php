@@ -12,6 +12,10 @@ $response = "";
 if (isset($_POST['create_tournament'])) {
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $mapName = mysqli_real_escape_string($con, $_POST['map_name']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
+    $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
+    $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
+    $maxSeats = (int) $_POST['max_seats'];
     $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
     $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
     $startTime = mysqli_real_escape_string($con, $_POST['start_time']);
@@ -23,6 +27,8 @@ if (isset($_POST['create_tournament'])) {
     $roomIdValue = $roomId !== '' ? "'$roomId'" : "NULL";
     $roomPasswordValue = $roomPassword !== '' ? "'$roomPassword'" : "NULL";
 
+    $query = "INSERT INTO tournaments (name, map_name, description, entry_fee, prize_pool, max_seats, start_time, status, room_id, room_password, room_open_at) 
+              VALUES ('$name', '$mapName', '$description', $entryFee, $prizePool, $maxSeats, '$startTime', '$status', $roomIdValue, $roomPasswordValue, $roomOpenAt)";
     $query = "INSERT INTO tournaments (name, map_name, entry_fee, prize_pool, start_time, status, room_id, room_password, room_open_at) 
               VALUES ('$name', '$mapName', $entryFee, $prizePool, '$startTime', '$status', $roomIdValue, $roomPasswordValue, $roomOpenAt)";
 
@@ -37,6 +43,10 @@ if (isset($_POST['update_tournament'])) {
     $tournamentId = (int) $_POST['tournament_id'];
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $mapName = mysqli_real_escape_string($con, $_POST['map_name']);
+    $description = mysqli_real_escape_string($con, $_POST['description']);
+    $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
+    $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
+    $maxSeats = (int) $_POST['max_seats'];
     $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
     $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
     $startTime = mysqli_real_escape_string($con, $_POST['start_time']);
@@ -51,6 +61,10 @@ if (isset($_POST['update_tournament'])) {
     $query = "UPDATE tournaments SET 
                 name='$name', 
                 map_name='$mapName', 
+                description='$description',
+                entry_fee=$entryFee, 
+                prize_pool=$prizePool, 
+                max_seats=$maxSeats,
                 entry_fee=$entryFee, 
                 prize_pool=$prizePool, 
                 start_time='$startTime', 
@@ -130,6 +144,14 @@ $tournaments = mysqli_query($con, "SELECT * FROM tournaments ORDER BY start_time
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea name="description" class="form-control" rows="3"><?= $editingTournament ? htmlspecialchars($editingTournament['description']) : '' ?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>Entry Fee (INR)</label>
@@ -140,6 +162,12 @@ $tournaments = mysqli_query($con, "SELECT * FROM tournaments ORDER BY start_time
                                         <div class="form-group">
                                             <label>Prize Pool (INR)</label>
                                             <input type="number" name="prize_pool" min="0" step="1" class="form-control" required value="<?= $editingTournament ? htmlspecialchars($editingTournament['prize_pool']) : '' ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Max Seats</label>
+                                            <input type="number" name="max_seats" min="0" step="1" class="form-control" required value="<?= $editingTournament ? htmlspecialchars($editingTournament['max_seats']) : '' ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -208,6 +236,7 @@ $tournaments = mysqli_query($con, "SELECT * FROM tournaments ORDER BY start_time
                                     <tr>
                                         <th>Name</th>
                                         <th>Map</th>
+                                        <th>Seats</th>
                                         <th>Entry Fee</th>
                                         <th>Prize Pool</th>
                                         <th>Start Time</th>
@@ -222,6 +251,7 @@ $tournaments = mysqli_query($con, "SELECT * FROM tournaments ORDER BY start_time
                                             <tr>
                                                 <td><?= htmlspecialchars($tournament['name']) ?></td>
                                                 <td><?= htmlspecialchars($tournament['map_name']) ?></td>
+                                                <td><?= $tournament['seats_filled'] ?> / <?= $tournament['max_seats'] ?></td>
                                                 <td>₹<?= number_format((float) $tournament['entry_fee'], 2) ?></td>
                                                 <td>₹<?= number_format((float) $tournament['prize_pool'], 2) ?></td>
                                                 <td><?= date('d M Y, h:i A', strtotime($tournament['start_time'])) ?></td>
