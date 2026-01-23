@@ -16,6 +16,8 @@ if (isset($_POST['create_tournament'])) {
     $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
     $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
     $maxSeats = (int) $_POST['max_seats'];
+    $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
+    $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
     $startTime = mysqli_real_escape_string($con, $_POST['start_time']);
     $status = mysqli_real_escape_string($con, $_POST['status']);
     $roomId = mysqli_real_escape_string($con, $_POST['room_id']);
@@ -27,6 +29,8 @@ if (isset($_POST['create_tournament'])) {
 
     $query = "INSERT INTO tournaments (name, map_name, description, entry_fee, prize_pool, max_seats, start_time, status, room_id, room_password, room_open_at) 
               VALUES ('$name', '$mapName', '$description', $entryFee, $prizePool, $maxSeats, '$startTime', '$status', $roomIdValue, $roomPasswordValue, $roomOpenAt)";
+    $query = "INSERT INTO tournaments (name, map_name, entry_fee, prize_pool, start_time, status, room_id, room_password, room_open_at) 
+              VALUES ('$name', '$mapName', $entryFee, $prizePool, '$startTime', '$status', $roomIdValue, $roomPasswordValue, $roomOpenAt)";
 
     if (mysqli_query($con, $query)) {
         $response = "Tournament created.";
@@ -43,6 +47,8 @@ if (isset($_POST['update_tournament'])) {
     $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
     $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
     $maxSeats = (int) $_POST['max_seats'];
+    $entryFee = number_format((float) $_POST['entry_fee'], 2, '.', '');
+    $prizePool = number_format((float) $_POST['prize_pool'], 2, '.', '');
     $startTime = mysqli_real_escape_string($con, $_POST['start_time']);
     $status = mysqli_real_escape_string($con, $_POST['status']);
     $roomId = mysqli_real_escape_string($con, $_POST['room_id']);
@@ -59,6 +65,8 @@ if (isset($_POST['update_tournament'])) {
                 entry_fee=$entryFee, 
                 prize_pool=$prizePool, 
                 max_seats=$maxSeats,
+                entry_fee=$entryFee, 
+                prize_pool=$prizePool, 
                 start_time='$startTime', 
                 status='$status', 
                 room_id=$roomIdValue, 
