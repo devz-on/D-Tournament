@@ -92,6 +92,20 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="tournaments.php" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>Tournaments
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.php" class="nav-link">
+                        <i class="nav-icon fas fa-user-shield"></i>
+                        <p>Users
+                        </p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a href="contact.php" class="nav-link">
