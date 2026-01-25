@@ -10,6 +10,8 @@
   - other
 - how to setup ?
   - use XAMPP and set database
+  - import the SQL schema from `database/schema.sql`
+  - update database credentials and Razorpay keys in `assets/php/config.php`
 
 ## Features
 - we have two Panels.
@@ -45,3 +47,37 @@
 ![img](https://github.com/ayushsolanki29/esport-tournament-organization-app-php/blob/main/screenshot/1(3).png)
 ![img](https://github.com/ayushsolanki29/esport-tournament-organization-app-php/blob/main/screenshot/1(4).png)
 
+## Database setup
+
+1. Create a MySQL database and user.
+2. Import `database/schema.sql`.
+3. Update the database credentials and Razorpay keys in `assets/php/config.php`.
+4. Add the Razorpay PHP SDK to `assets/razorpay/Razorpay.php` (or update the include path in the payment scripts).
+
+The schema includes default rows for admin login (`settings` row `id=3`). Please change the admin username and password after import.
+The schema also includes tables for multi-tournament management, team wallets, and tournament entries.
+
+## Hosting on cPanel
+
+1. **Upload files**
+   - Zip the project and upload it via cPanel File Manager, then extract into `public_html`.
+2. **Create database**
+   - Use the *MySQL Database Wizard* to create a database and user.
+3. **Import schema**
+   - Open *phpMyAdmin*, select the database, and import `database/schema.sql`.
+4. **Update config**
+   - Edit `assets/php/config.php` with your database credentials and Razorpay keys.
+5. **File permissions**
+   - Ensure `assets/images/payment` is writable so payment screenshots can upload.
+6. **Admin login**
+   - Log in at `/admin/login.php` using the credentials from the `settings` table, then update them.
+7. **Tournament management**
+   - Use `/admin/tournaments.php` to create and manage multiple tournaments with entry fees, prize pools, and room details.
+8. **User dashboard**
+   - Users can use `/dashboard.php` to add balance, join tournaments, and view room IDs/passwords when they are released.
+9. **User auth**
+   - Configure Firebase in `login.php` and `register.php` for Google sign-in, or use email/password registration.
+10. **User pages**
+   - `/tournaments.php` (browse upcoming tournaments), `/my_tournaments.php` (your entries), `/leaderboard.php` (top winners), `/add_funds.php` (top up wallet), `/register_payment.php` (registration payment).
+11. **Email OTP**
+   - Email verification uses OTP via `assets/php/send_code.php`. Update SMTP credentials there before enabling.

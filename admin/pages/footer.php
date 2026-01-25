@@ -17,28 +17,23 @@
                 </button>
             </div>
             <div class="modal-body">
-                <ul class="list-group">
+                <h6>Normal Notifications</h6>
+                <ul class="list-group mb-3">
                     <?php
-                    $run_get_not = mysqli_query($con, "SELECT * FROM `notification` ORDER BY status='unread' DESC, id ASC");
+                    $run_get_not = mysqli_query($con, "SELECT * FROM `notification` WHERE category='normal' ORDER BY status='unread' DESC, id ASC");
 
                     while ($fetched_noty = mysqli_fetch_assoc($run_get_not)) {
-                        // Assuming teamname() returns a string, adjust this function accordingly
-                        $team_data = teamname($fetched_noty['team_name']);
-                        if ($team_data == NULL) {
-                            $team_name_noti = "Unknown Team";
-                        } else {
-                            $team_name_noti =  $team_data['team_name'];
-                        }
+                        $display_name = $fetched_noty['team_name'] ?: 'Unknown User';
                     ?>
 
                         <li class="list-group-item <?php if ($fetched_noty['status'] == "unread") {
                                                         echo "font-weight-bold";
                                                     } ?>">
                             <div class="d-flex justify-content-between align-items-center">
-                                <div><?= $team_name_noti ?> <?= $fetched_noty['message'] ?></div>
+                                <div><?= htmlspecialchars($display_name) ?> <?= htmlspecialchars($fetched_noty['message']) ?></div>
                                 <div class="text-muted">
                                     <?php
-                                    $ratingDate = strtotime($fetched_noty['date']);
+                                    $ratingDate = strtotime($fetched_noty['created_at']);
                                     $currentDate = time();
                                     $differenceInSeconds = $currentDate - $ratingDate;
                                     $differenceInDays = floor($differenceInSeconds / (60 * 60 * 24));
@@ -60,6 +55,46 @@
 
                     <?php } ?>
 
+                </ul>
+
+                <h6>System Alerts</h6>
+                <ul class="list-group">
+                    <?php
+                    $run_system_not = mysqli_query($con, "SELECT * FROM `notification` WHERE category='system' ORDER BY status='unread' DESC, id ASC");
+
+                    while ($system_not = mysqli_fetch_assoc($run_system_not)) {
+                    ?>
+                        <li class="list-group-item <?php if ($system_not['status'] == "unread") {
+                                                        echo "font-weight-bold";
+                                                    } ?>">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <strong>System:</strong> <?= htmlspecialchars($system_not['message']) ?>
+                                    <?php if (!empty($system_not['context'])) { ?>
+                                        <pre class="mt-2 mb-0"><?= htmlspecialchars($system_not['context']) ?></pre>
+                                    <?php } ?>
+                                </div>
+                                <div class="text-muted">
+                                    <?php
+                                    $ratingDate = strtotime($system_not['created_at']);
+                                    $currentDate = time();
+                                    $differenceInSeconds = $currentDate - $ratingDate;
+                                    $differenceInDays = floor($differenceInSeconds / (60 * 60 * 24));
+                                    if ($differenceInDays == 0) {
+                                        echo 'Today';
+                                    } elseif ($differenceInDays == 1) {
+                                        echo 'Yesterday';
+                                    } elseif ($differenceInDays <= 60) {
+                                        echo $differenceInDays . ' days ago';
+                                    } else {
+                                        $differenceInWeeks = ceil($differenceInDays / 7);
+                                        echo $differenceInWeeks . ' weeks ago';
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="modal-footer">

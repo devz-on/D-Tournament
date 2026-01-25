@@ -48,16 +48,7 @@
                 <li class="nav-item" data-toggle="modal" data-target="#searchModal">
                     <a style="cursor:pointer;" class="nav-link">
                         <i class="nav-icon fas fa-search"></i>
-                        <p>Search Teams
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="verifed_team.php" class="nav-link">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Eligible Teams
+                        <p>Search Users
                         </p>
                     </a>
                 </li>
@@ -78,17 +69,23 @@
                     </a></a>
                 </li>
                 <li class="nav-item">
-                    <a href="igl_details.php" class="nav-link">
-                        <i class="nav-icon fas fa-male"></i>
-                        <p>
-                            Caption Details
+                    <a href="winners.php" class="nav-link">
+                        <i class="nav-icon fas fa-trophy"></i>
+                        <p>Winners
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="winners.php" class="nav-link">
-                        <i class="nav-icon fas fa-trophy"></i>
-                        <p>Winners Teams
+                    <a href="tournaments.php" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>Tournaments
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.php" class="nav-link">
+                        <i class="nav-icon fas fa-user-shield"></i>
+                        <p>Users
                         </p>
                     </a>
                 </li>
@@ -123,10 +120,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="verifed_team.php">
+            <form action="users.php">
                 <div class="modal-body">
 
-                    <input type="search" id="searchInput" name="t" class="form-control" oninput="getSuggestions()" placeholder="Type to search">
+                    <input type="search" id="searchInput" name="q" class="form-control" oninput="getSuggestions()" placeholder="Type to search">
                     <ul id="suggestionsList" class="list-group mt-2">
                         <div id="autocompleteSuggestions">
                             <div class="dropdown-header">Suggestions</div>

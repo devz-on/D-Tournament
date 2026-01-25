@@ -31,10 +31,10 @@
               </li>
 
               <li>
-                <a href="verifed_teams.php" class="footer-menu-link">Verifed Teams</a>
+                <a href="tournaments.php" class="footer-menu-link">Upcoming Tournaments</a>
               </li>
               <li>
-                <a href="profile.php" class="footer-menu-link">My Team Status</a>
+                <a href="my_tournaments.php" class="footer-menu-link">My Tournaments</a>
               </li>
 
               <li>
@@ -139,6 +139,38 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script>
+    window.addEventListener('error', function (event) {
+      fetch('assets/php/system_log.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: event.message || 'Unknown error',
+          context: JSON.stringify({
+            source: event.filename,
+            line: event.lineno,
+            column: event.colno,
+            stack: event.error ? event.error.stack : null,
+            url: window.location.href
+          })
+        })
+      });
+    });
+
+    window.addEventListener('unhandledrejection', function (event) {
+      fetch('assets/php/system_log.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: event.reason ? event.reason.toString() : 'Unhandled promise rejection',
+          context: JSON.stringify({
+            reason: event.reason,
+            url: window.location.href
+          })
+        })
+      });
+    });
+  </script>
 
   <!-- 
     - ionicon link

@@ -1,6 +1,6 @@
 <?php
 include '../assets/php/config.php';
-include '../assets/php/function.php';
+include '../assets/php/user_helpers.php';
 session_start();
 
 if (!isset($_SESSION['admin_auth'])) {
@@ -8,25 +8,48 @@ if (!isset($_SESSION['admin_auth'])) {
   exit;
 }
 
+$response = "";
 
-if (isset($_GET['deleteteam'], $_GET['id'])) {
-  $id = $_GET['id'];
+if (isset($_POST['update_entry'])) {
+  $entryId = (int) $_POST['entry_id'];
+  $result = mysqli_real_escape_string($con, $_POST['result']);
+  $winnings = number_format((float) $_POST['winnings_amount'], 2, '.', '');
 
-  $delete = "DELETE FROM `winners` WHERE `id`='$id'";
+  $entryResult = mysqli_query($con, "SELECT * FROM user_tournament_entries WHERE id=$entryId");
+  $entry = $entryResult ? mysqli_fetch_assoc($entryResult) : null;
 
-  if (mysqli_query($con, $delete)) {
-    echo "<script>alert('Remove successfully!')</script>";
-    echo "<script>window.location.href = 'winners.php'</script>";
+  if ($entry) {
+    $delta = (float) $winnings - (float) $entry['winnings_amount'];
+    mysqli_begin_transaction($con);
+    $updateEntry = mysqli_query($con, "UPDATE user_tournament_entries SET result='$result', winnings_amount=$winnings WHERE id=$entryId");
+    $updateWallet = true;
+    $logTransaction = true;
+    if ($delta != 0) {
+      $deltaSafe = number_format($delta, 2, '.', '');
+      ensureUserWallet($con, $entry['user_id']);
+      $updateWallet = mysqli_query($con, "UPDATE user_wallets SET winnings_balance = winnings_balance + $deltaSafe WHERE user_id={$entry['user_id']}");
+      $logTransaction = mysqli_query($con, "INSERT INTO user_transactions (user_id, type, amount, source, note) VALUES ({$entry['user_id']}, 'winnings', $deltaSafe, 'admin', 'Tournament winnings update')");
+    }
+
+    if ($updateEntry && $updateWallet && $logTransaction) {
+      mysqli_commit($con);
+      $response = "Entry updated.";
+    } else {
+      mysqli_rollback($con);
+      $response = "Failed to update entry.";
+    }
   }
 }
 
-
+$tournaments = mysqli_query(
+  $con,
+  "SELECT * FROM tournaments WHERE status='ended' OR start_time <= DATE_SUB(NOW(), INTERVAL 45 MINUTE) ORDER BY start_time DESC"
+);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <title>Aimgod eSports| Winners</title>
   <?php include 'pages/header.php' ?>
 </head>
@@ -47,104 +70,86 @@ if (isset($_GET['deleteteam'], $_GET['id'])) {
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">
-                Winners Teams
-              </h1>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-              </ol>
+              <h1 class="m-0">Winners</h1>
             </div>
           </div>
         </div>
       </div>
 
-
-      <!-- Main content -->
       <section class="content">
         <div class="container-fluid">
+          <?php if ($response) { ?>
+            <div class="alert alert-info"><?= $response ?></div>
+          <?php } ?>
 
-          <div class="row">
-            <div class="card w-100 " style="overflow: scroll;">
-              <div class="card-header">
-                <h3 class="card-title">Winner Teams</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table class="table table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Teams</th>
-                      <th>Position</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <?php
-                    $query = "SELECT * FROM `winners` ORDER BY `winners`.`position` ASC";
-                    $result = mysqli_query($con, $query);
-                    if (mysqli_num_rows($result) == 0) {
-                      echo '<tr><td colspan="4">No Team Submitted</td></tr>';
-                    } else {
-                      $count = 1;
-                      while ($w_select = mysqli_fetch_assoc($result)) {
-                        $team_id_select = $w_select['team_id'];
-                        $select_team = "SELECT * FROM `teams`  WHERE `id` = $team_id_select";
-                        $res_team = mysqli_query($con, $select_team);
-                        $t_data = mysqli_fetch_assoc($res_team); ?>
-
+          <?php if ($tournaments && mysqli_num_rows($tournaments) > 0) { ?>
+            <?php while ($tournament = mysqli_fetch_assoc($tournaments)) { ?>
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title"><?= htmlspecialchars($tournament['name']) ?> - <?= date('d M Y, h:i A', strtotime($tournament['start_time'])) ?></h3>
+                </div>
+                <div class="card-body">
+                  <?php
+                  $totalPot = (float) $tournament['entry_fee'] * (int) $tournament['seats_filled'];
+                  $firstPrize = $totalPot * 0.2;
+                  $secondPrize = $totalPot * 0.1;
+                  $thirdPrize = (float) $tournament['entry_fee'];
+                  ?>
+                  <p><strong>Suggested payouts:</strong> 1st ₹<?= number_format($firstPrize, 2) ?>, 2nd ₹<?= number_format($secondPrize, 2) ?>, 3rd ₹<?= number_format($thirdPrize, 2) ?></p>
+                  <?php
+                  $entries = mysqli_query(
+                    $con,
+                    "SELECT ute.*, u.username, u.email FROM user_tournament_entries ute JOIN users u ON u.id = ute.user_id WHERE ute.tournament_id={$tournament['id']} ORDER BY ute.winnings_amount DESC"
+                  );
+                  ?>
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Result</th>
+                        <th>Winnings</th>
+                        <th>Update</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php if ($entries && mysqli_num_rows($entries) > 0) { ?>
+                        <?php while ($entry = mysqli_fetch_assoc($entries)) { ?>
+                          <tr>
+                            <td><?= htmlspecialchars($entry['username']) ?><br><small><?= htmlspecialchars($entry['email']) ?></small></td>
+                            <td><?= ucfirst($entry['result']) ?></td>
+                            <td>₹<?= number_format((float) $entry['winnings_amount'], 2) ?></td>
+                            <td>
+                              <form method="post" class="form-inline">
+                                <input type="hidden" name="entry_id" value="<?= $entry['id'] ?>">
+                                <select name="result" class="form-control form-control-sm mr-2">
+                                  <?php
+                                  $results = ['pending', 'win', 'lose'];
+                                  foreach ($results as $res) {
+                                    $selected = $entry['result'] === $res ? 'selected' : '';
+                                    echo "<option value=\"$res\" $selected>" . ucfirst($res) . "</option>";
+                                  }
+                                  ?>
+                                </select>
+                                <input type="number" step="1" min="0" name="winnings_amount" value="<?= htmlspecialchars($entry['winnings_amount']) ?>" class="form-control form-control-sm mr-2" style="width:120px;">
+                                <button type="submit" name="update_entry" class="btn btn-sm btn-primary">Save</button>
+                              </form>
+                            </td>
+                          </tr>
+                        <?php } ?>
+                      <?php } else { ?>
                         <tr>
-                          <td>
-                            <?= $count++ . "." ?>
-                          </td>
-                          <td>
-                            <?= $t_data['team_name'] ?><br />
-                          </td>
-
-                          <td>
-                            <p class="bg-success d-inline p-1 rounded w-25">
-                              <?php
-                              if ($w_select['position'] == 1) {
-                                echo $w_select['position'] . 'st';
-                              } elseif ($w_select['position'] == 2) {
-                                echo $w_select['position'] . 'nd';
-                              } elseif ($w_select['position'] == 3) {
-                                echo $w_select['position'] . 'rd';
-                              } else {
-                                echo $w_select['position'] . 'th';
-                              }
-
-                              ?>
-                            </p>
-                          </td>
-                          <td>
-
-                            <button class="btn btn-danger btn-sm mt-2" onclick="deleteteam('<?= $w_select['id'] ?>')"
-                              type="button">Revoke Position</button>
-                            <script>
-                              function deleteteam(teamcode) {
-                                var confirm_box = confirm("Are you sure you want to remove position?");
-                                if (confirm_box) {
-                                  window.location = 'winners.php?deleteteam&id=' + teamcode;
-                                }
-                              }
-                            </script>
-                          </td>
+                          <td colspan="4">No entries for this tournament.</td>
                         </tr>
-
-                        <?php
-
-
-                      }
-                    }
-                    ?>
-                  </tbody>
-
-                </table>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-
-            </div>
+            <?php } ?>
+          <?php } else { ?>
+            <p>No completed tournaments yet.</p>
+          <?php } ?>
+        </div>
       </section>
     </div>
     <?php include 'pages/footer.php' ?>

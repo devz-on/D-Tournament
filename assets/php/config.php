@@ -35,4 +35,12 @@ if (!isset($_COOKIE['viewed'])) {
 define('RAZORPAY_KEY_ID', 'rzp_live_RapWYMXKAAQqH0');      // NEW key id
 define('RAZORPAY_KEY_SECRET', 'tHQLfhEE3lT4U75GImgXCwWF'); // NEW secret
 define('REGISTRATION_AMOUNT', 50); // INR
+
+/* Firebase Config */
+define('FIREBASE_API_KEY', 'YOUR_FIREBASE_API_KEY');
+define('FIREBASE_AUTH_DOMAIN', 'YOUR_FIREBASE_AUTH_DOMAIN');
+define('FIREBASE_PROJECT_ID', 'YOUR_FIREBASE_PROJECT_ID');
+
+/* Admin OTP */
+define('ADMIN_EMAIL', 'bhoothihu@gmail.com');
 ?>

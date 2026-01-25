@@ -390,6 +390,7 @@ html {
 
 body {
   overflow-x: hidden;
+  padding-top: 90px;
 }
 
 body.active {

@@ -1,6 +1,7 @@
 <?php
 include '../assets/php/config.php';
 include '../assets/php/function.php';
+include '../assets/php/send_code.php';
 session_start();
 
 if (!isset($_SESSION['admin_auth'])) {
@@ -37,6 +38,38 @@ if (isset($_POST['changeurl'])) {
     header('Location: settings.php');
    }
 }
+
+if (isset($_POST['send_admin_otp'])) {
+    $otpCode = (string) random_int(100000, 999999);
+    $_SESSION['admin_otp'] = $otpCode;
+    $_SESSION['admin_otp_expires'] = time() + (10 * 60);
+    sendOtp(
+        ADMIN_EMAIL,
+        'Admin Settings Verification',
+        $otpCode,
+        'Admin',
+        date('M Y'),
+        'send-otp.html'
+    );
+    header('Location: settings.php?otp=sent');
+}
+
+if (isset($_POST['update_admin_credentials'])) {
+    $otp = $_POST['otp'] ?? '';
+    $newUsername = mysqli_real_escape_string($con, $_POST['new_admin_username']);
+    $newPassword = mysqli_real_escape_string($con, $_POST['new_admin_password']);
+    if (!isset($_SESSION['admin_otp']) || time() > ($_SESSION['admin_otp_expires'] ?? 0)) {
+        header('Location: settings.php?otp=expired');
+        exit;
+    }
+    if ($otp !== $_SESSION['admin_otp']) {
+        header('Location: settings.php?otp=invalid');
+        exit;
+    }
+    mysqli_query($con, "UPDATE `settings` SET `data1`='$newUsername', `data2`='$newPassword' WHERE id=3");
+    unset($_SESSION['admin_otp'], $_SESSION['admin_otp_expires']);
+    header('Location: settings.php?otp=updated');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +97,21 @@ if (isset($_POST['changeurl'])) {
                     </div>
 
                     <hr>
+                    <?php if (isset($_GET['otp'])) { ?>
+                        <div class="alert alert-info">
+                            <?php
+                            if ($_GET['otp'] === 'sent') {
+                                echo 'OTP sent to admin email.';
+                            } elseif ($_GET['otp'] === 'expired') {
+                                echo 'OTP expired. Please request a new one.';
+                            } elseif ($_GET['otp'] === 'invalid') {
+                                echo 'Invalid OTP.';
+                            } elseif ($_GET['otp'] === 'updated') {
+                                echo 'Admin credentials updated.';
+                            }
+                            ?>
+                        </div>
+                    <?php } ?>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead class="thead-light">
@@ -169,7 +217,7 @@ if (isset($_POST['changeurl'])) {
                                     ?>
                                     <td>username : <span class="text-success"><?= $username ?> </span> <br> password :<span class="text-success"> <?= $password ?></span> </td>
                                     <td>
-                                        <button type="button" name="" disabled class="btn btn-info"> Update</button>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#AdminUpdate"> Update</button>
 
                                     </td>
                                 </tr>
@@ -178,8 +226,37 @@ if (isset($_POST['changeurl'])) {
                         </table>
                     </div>
 
-
-
+                    <div class="modal fade" id="AdminUpdate" tabindex="-1" role="dialog" aria-labelledby="AdminUpdateLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="AdminUpdateLabel">Update Admin Credentials</h5>
+                                </div>
+                                <div class="modal-body container">
+                                    <form method="post">
+                                        <p>Send OTP to admin email: <?= ADMIN_EMAIL ?></p>
+                                        <button type="submit" name="send_admin_otp" class="btn btn-secondary mb-3">Send OTP</button>
+                                    </form>
+                                    <hr>
+                                    <form method="post">
+                                        <div class="mb-3">
+                                            <label class="form-label">OTP</label>
+                                            <input type="text" name="otp" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">New Username</label>
+                                            <input type="text" name="new_admin_username" class="form-control" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">New Password</label>
+                                            <input type="text" name="new_admin_password" class="form-control" required>
+                                        </div>
+                                        <button type="submit" name="update_admin_credentials" class="btn btn-primary">Update</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

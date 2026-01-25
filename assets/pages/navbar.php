@@ -65,9 +65,11 @@ if ($result_settings) {
 
         <li><a href="index.php#hero" class="navbar-link">Home</a></li>
         <li><a href="index.php#about" class="navbar-link">About</a></li>
-        <li><a href="index.php#tournament" class="navbar-link">Tournament</a></li>
-        <li><a href="index.php#team" class="navbar-link">Team</a></li>
-        <li><a href="profile.php" class="navbar-link">My Team</a></li>
+        <li><a href="tornament.php" class="navbar-link">Tournaments</a></li>
+        <li><a href="tournaments.php" class="navbar-link">Upcoming</a></li>
+        <li><a href="my_tournaments.php" class="navbar-link">My Tournaments</a></li>
+        <li><a href="leaderboard.php" class="navbar-link">Leaderboard</a></li>
+        <li><a href="dashboard.php" class="navbar-link">Dashboard</a></li>
         <li><a href="contact.php" class="navbar-link">Contact</a></li>
 
       </ul>
@@ -104,20 +106,39 @@ if ($result_settings) {
 
     <div class="header-actions">
 
-      <a href="profile.php">
+      <a href="dashboard.php">
         <button class="search">
           <ion-icon name="game-controller-outline"></ion-icon>
         </button>
       </a>
 
-      <a href="<?= htmlspecialchars($registion_url) ?>" target="_blank">
-        <button class="btn-sign_in">
-          <div class="icon-box">
-            <ion-icon name="log-in-outline"></ion-icon>
-          </div>
-          <span>Register</span>
-        </button>
-      </a>
+      <?php if (isset($_SESSION['user_id'])) { ?>
+        <a href="add_funds.php">
+          <button class="btn-sign_in">
+            <div class="icon-box">
+              <ion-icon name="wallet-outline"></ion-icon>
+            </div>
+            <span>Add Money</span>
+          </button>
+        </a>
+      <?php } else { ?>
+        <a href="login.php">
+          <button class="btn-sign_in">
+            <div class="icon-box">
+              <ion-icon name="log-in-outline"></ion-icon>
+            </div>
+            <span>Login</span>
+          </button>
+        </a>
+        <a href="register.php">
+          <button class="btn-sign_in">
+            <div class="icon-box">
+              <ion-icon name="person-add-outline"></ion-icon>
+            </div>
+            <span>Register</span>
+          </button>
+        </a>
+      <?php } ?>
 
     </div>
 

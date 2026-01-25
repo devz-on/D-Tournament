@@ -1,7 +1,6 @@
 <?php
 include "assets/php/config.php";
 include "assets/php/user_helpers.php";
-include "assets/php/send_code.php";
 session_start();
 
 $response = "";
@@ -11,50 +10,28 @@ if (isset($_SESSION['user_id'])) {
     exit;
 }
 
-if (isset($_POST['register_user'])) {
+if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($con, $_POST['username']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = $_POST['password'];
-
-    if (!preg_match('/^[A-Za-z0-9_]{4,}$/', $username)) {
-        $response = "Username must be at least 4 characters and contain only letters, numbers, or underscore.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $response = "Invalid email address.";
-    } elseif (strlen($password) < 6) {
-        $response = "Password must be at least 6 characters.";
+    $user = getUserByUsername($con, $username);
+    if (!$user || !$user['password_hash']) {
+        $response = "Invalid login details.";
+    } elseif (!password_verify($password, $user['password_hash'])) {
+        $response = "Invalid login details.";
+    } elseif ($user['email_verified'] !== 'verified') {
+        $_SESSION['user_id'] = $user['id'];
+        header("Location: verify_email.php");
+        exit;
+    } elseif ($user['status'] === 'banned') {
+        $response = "Your account is banned. Contact support.";
     } else {
-        $existing = getUserByEmail($con, $email);
-        if ($existing) {
-            $response = "Email is already registered.";
-        } else {
-            $checkUsername = mysqli_query($con, "SELECT id FROM users WHERE username='$username'");
-            if ($checkUsername && mysqli_num_rows($checkUsername) > 0) {
-                $response = "Username is already taken.";
-            } else {
-                $hash = password_hash($password, PASSWORD_DEFAULT);
-                $otpCode = (string) random_int(100000, 999999);
-                $otpExpires = date('Y-m-d H:i:s', strtotime('+10 minutes'));
-                $insert = "INSERT INTO users (username, email, password_hash, email_verified, email_otp, email_otp_expires, status) 
-                           VALUES ('$username', '$email', '$hash', 'pending', '$otpCode', '$otpExpires', 'pending')";
-                if (mysqli_query($con, $insert)) {
-                    $userId = mysqli_insert_id($con);
-                    ensureUserWallet($con, $userId);
-                    mysqli_query($con, "INSERT INTO user_payments (user_id, amount, payment_type, status) VALUES ($userId, 50, 'registration', 'created')");
-                    $_SESSION['user_id'] = $userId;
-                    sendOtp(
-                        $email,
-                        'Verify your email for Aimgod eSports',
-                        $otpCode,
-                        $username,
-                        date('M Y'),
-                        'send-otp.html'
-                    );
-                    header("Location: verify_email.php");
-                    exit;
-                }
-                $response = "Unable to register. Please try again.";
-            }
+        $_SESSION['user_id'] = $user['id'];
+        if ($user['status'] === 'pending') {
+            header("Location: register_payment.php");
+            exit;
         }
+        header("Location: dashboard.php");
+        exit;
     }
 }
 ?>
@@ -62,7 +39,7 @@ if (isset($_POST['register_user'])) {
 <html lang="en">
 
 <head>
-    <title>User Registration</title>
+    <title>User Login</title>
     <?php include "assets/pages/header.php"; ?>
     <style>
         .auth-card {
@@ -102,9 +79,9 @@ if (isset($_POST['register_user'])) {
     <main>
         <article>
             <?php include "assets/pages/navbar.php"; ?>
-            <section class="team section-wrapper" id="register">
+            <section class="team section-wrapper" id="login">
                 <div class="container">
-                    <h2 class="h2 section-title">Create Your Account</h2>
+                    <h2 class="h2 section-title">Login</h2>
                     <div class="auth-card">
                         <?php if ($response) { ?>
                             <p><?= htmlspecialchars($response) ?></p>
@@ -112,17 +89,14 @@ if (isset($_POST['register_user'])) {
                         <form method="post">
                             <label>Username</label>
                             <input type="text" name="username" minlength="4" required>
-                            <p class="hint">Username must be at least 4 characters (letters/numbers/underscore).</p>
-                            <label>Email</label>
-                            <input type="email" name="email" required>
                             <label>Password</label>
                             <input type="password" name="password" minlength="6" required>
-                            <button type="submit" name="register_user">Register & Pay ₹50</button>
+                            <button type="submit" name="login_user">Login</button>
                         </form>
-                        <p class="hint">Already have an account? <a href="login.php">Login</a></p>
+                        <p class="hint">No account yet? <a href="register.php">Register</a></p>
                         <hr>
-                        <p class="hint">Or sign up using Google:</p>
-                        <button type="button" id="googleSignUp">Continue with Google</button>
+                        <p class="hint">Or login using Google:</p>
+                        <button type="button" id="googleLogin">Continue with Google</button>
                     </div>
                 </div>
             </section>
@@ -142,11 +116,11 @@ if (isset($_POST['register_user'])) {
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
 
-        document.getElementById('googleSignUp').addEventListener('click', async () => {
+        document.getElementById('googleLogin').addEventListener('click', async () => {
             const provider = new firebase.auth.GoogleAuthProvider();
             const result = await auth.signInWithPopup(provider);
             const user = result.user;
-            const desiredUsername = prompt('Choose a username (min 4 characters, letters/numbers only)') || '';
+            const desiredUsername = prompt('Enter your username (if this is your first login)') || '';
             const response = await fetch('assets/php/firebase_login.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
